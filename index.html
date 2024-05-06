@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Dos</title>
+    <script defer src="main.js"></script></head>
+    <body>
+
+        <div class="container">
+
+            <div class="heaDing">My Schedule
+                <div class="head1"></div>
+                <button  id="addEvents" style="margin-right: 200px;" >Add Events</button>
+            </div>
+
+            <div class="sideBar"> 
+                <header>
+                    <nav>
+                        <button id="event">Events</button>
+                        <button id="today">Today</button>
+            
+                    </nav>
+                </header>
+            </div>
+            
+
+            <div id="content">
+
+                
+                <div class="tasks">
+                    
+
+                </div>
+                <p></p>
+                
+                <div id="foRm">
+                    <form id="myForm" action="" method="get" style="display: none;">
+                        <div class="tiTle">
+                            <label for="title">Title:  </label>
+                            <input type="text" id="title" name = "title" required>
+                        </div>
+        
+                        <p></p>
+        
+                        <div class="toDo">
+                            <label for="todo">Task:  </label>
+                            <input type="text" id="todo" name = "todo" required>
+                        </div>
+
+                        <p></p>
+
+                        <div class="daTe">
+                            <label for="date">Date:  </label>
+                            <input type="datetime-local" id="date" name = "date" required>
+                        </div>
+        
+                        <button type="submit" id="aDD">Add</button>
+                    </form>
+
+                    <div id="cler" style="display: none; color: black;">remove form</div>
+                    <p></p>
+                </div>
+      
+
+            </div>
+        </div>
+        
+    </body>
+</html>
