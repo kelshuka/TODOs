@@ -20,32 +20,49 @@ content.classList.add('mainBar');
 
 const addEvents = document.querySelector('#addEvents');
 const events = document.querySelector('#event');
+const myForm = document.querySelector('#myForm');
 
 
-//events.addEventListener('click', ()=> {
-//    addEvents.style.display ='block';
-//});
+function dataStorage(){
+    localStorage.setItem("data",parentDiv.innerHTML)
+}
 
 addEvents.addEventListener('click', ()=> {
-    //myForm.style.display = 'block';
+    myForm.style.display = 'block';
     highEvents();
+    cler.style.display = 'block';
+    dataStorage();
     
 });
 
-//const navs = document.querySelectorAll('nav');
-//const parentDiv = document.querySelector('.tasks');
+function fun(){
+    //document.getElementById("myForm").reset();
+    document.getElementById("myForm").style.display = 'none';
+}
 
-//navs.forEach((i) => {
-//    i.addEventListener('click', ()=> {
-//        addEvents.style.display = 'block';
-//        highEvents();
-//        parentDiv.innerHTML = '';
-        
-    
- //   });
-//});
+const cler = document.getElementById('cler');
+cler.classList.add('cler');
+
+cler.addEventListener('click', ()=> {
+    fun();
+    cler.style.display = 'none';
+})
+
+const parentDiv = document.querySelector('.tasks');
+
+events.addEventListener('click', ()=> {
+    parentDiv.style.display = 'grid';
+    document.getElementById("myForm").style.display = 'none';
+    cler.style.display = 'none';
+})
 
 
+
+function showDataBase(){
+    parentDiv.innerHTML = localStorage.getItem("data")
+}
+
+showDataBase();
 
 
 

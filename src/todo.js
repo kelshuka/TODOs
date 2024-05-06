@@ -10,9 +10,6 @@ function addToSchedule(a, b, c) {
     const subDiv = document.createElement('div');
     subDiv.innerHTML = '';
 
-    //const ti = a;
-    //const tod = b ;
-    //const dat = " " + c;
 
     let po = {a, b, c};
 
@@ -25,14 +22,24 @@ function addToSchedule(a, b, c) {
 
     const p2 = document.createElement('p');
     p2.textContent = val[1];
-    //p1.classList.add('title');
+    
 
     const p3 = document.createElement('p');
     p3.textContent = c;
-    //p1.classList.add('title');
+    
+    const butt = document.createElement('button');
+    butt.innerHTML = 'X';
+
+
+    function ret() {
+        subDiv.remove();
+    };
+    butt.addEventListener('click', ()=> {
+        ret();
+    })
 
     
-    subDiv.append(p1,p2,p3);
+    subDiv.append(p1,p2,p3, butt);
 
     console.log(po);
 
@@ -63,7 +70,6 @@ function myFormDivs(){
         console.log(pol);
         return pol;
         //myForm.style.display = 'none';
-        
         
     });   
 }
